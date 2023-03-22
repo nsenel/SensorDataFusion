@@ -13,9 +13,9 @@ To use our multi-sensor fusion framework, follow these steps:
 
 Install the required dependencies ROS, Python(Matplotlib, numpy, opencv).
 
-1-export ROS_PYTHON_VERSION=3(If using ROS-Melodic)
-2-catkin_make
-3-source devel/setup.bash
+1.export ROS_PYTHON_VERSION=3(If using ROS-Melodic)
+2.catkin_make
+3.source devel/setup.bash
 
 Running with lgsvl simulator:
 Run the fusion framework main ros launch: **roslaunch unscented_kf_v4 lgsvl_bag_tracker.launch**

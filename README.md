@@ -12,7 +12,7 @@ To use our multi-sensor fusion framework, follow these steps:
 
 Install the required dependencies ROS, Python(Matplotlib, numpy, opencv).
 Running with lgsvl simulator:
-Run the fusion framework main ros launch: roslaunch unscented_kf_v4 lgsvl_bag_tracker.launch
+Run the fusion framework main ros launch: **roslaunch unscented_kf_v4 lgsvl_bag_tracker.launch**
   - Change the bag file location or disable the command simulation running in parallel
 Runing with custom sensor set:
   - Change subcribe topic names in ukf_ros_node_lgsvl.py as custom topic names.

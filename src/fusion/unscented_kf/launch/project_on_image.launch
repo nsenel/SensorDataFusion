@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+    <arg name="mast_number"                           default=""/>
+    <arg name="side"                                  default=""/>
+    
+    <arg name="sensor_configuration_name"             default="configured_sensor_objs_lgsvl"/>
+    <arg name="camera_name"                           default="Front_Camera"/>
+    <arg name="image_topic_name"                      default="/camera/image_raw"/>
+    <arg name="detection_msg_as_point_cloud"          default="False"/>
+    <arg name="lidar_sensor_name"                     default="Front_Lidar"/>
+    <arg name="lidar_row_topic_name"                  default="/points_raw"/>
+    <arg name="lidar_detection_topic_name"            default="/lidar/detections1"/>
+
+    <arg name="set_to_zero_height"                    default="False"/>
+    <arg name="rotating_lidar"                        default="True"/>
+    <arg name="depth_index_lidar"                     default="0"/>
+    <arg name="left_right_index_lidar"                default="1"/>
+    <arg name="height_index_lidar"                    default="2"/>
+
+    <node pkg="unscented_kf_v4" name="lidar_projector_node_$(arg mast_number)_$(arg side)" type="project_cloud_on_image.py" output="screen">
+        <param name="sensor_configuration_name"       value="$(arg sensor_configuration_name)" />
+        <param name="camera_name"                     value="$(arg camera_name)" />
+        <param name="image_topic_name"                value="$(arg image_topic_name)"/>
+        <param name="detection_msg_as_point_cloud"    value="$(arg detection_msg_as_point_cloud)" />
+        <param name="lidar_sensor_name"               value="$(arg lidar_sensor_name)"/>
+        <param name="lidar_row_topic_name"            value="$(arg lidar_row_topic_name)"/>
+        <param name="lidar_detection_topic_name"      value="$(arg lidar_detection_topic_name)"/>
+        <param name="set_to_zero_height"              value="$(arg set_to_zero_height)"/>
+        <param name="rotating_lidar"                  value="$(arg rotating_lidar)"/>
+
+        <param name="depth_index_lidar"               value="$(arg depth_index_lidar)"/>
+        <param name="left_right_index_lidar"          value="$(arg left_right_index_lidar)"/>
+        <param name="height_index_lidar"              value="$(arg height_index_lidar)"/>
+
+    </node>
+</launch>

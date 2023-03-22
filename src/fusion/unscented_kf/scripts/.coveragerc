@@ -1,0 +1,46 @@
+# .coveragerc to control coverage.py
+[run]
+branch = True
+omit =
+        *Test*
+        */usr/local/lib*
+        */__init__.py
+        */site-packages/*
+        */tests/*
+        */.eggs/*
+        */usr/lib/*
+
+
+[report]
+omit =
+        *test*
+        */usr/local/lib*
+        */__init__.py
+        */home/numan/.local/lib/python3.6/site-packages/
+
+# Regexes for lines to exclude from consideration
+exclude_lines =
+    # Have to re-enable the standard pragma
+    pragma: no cover
+    pass
+    @abstractmethod
+    @abc.abstractmethod
+
+    # Don't complain about missing debug-only code:
+    def __repr__
+    if self\.debug
+
+    # Don't complain if tests don't hit defensive assertion code:
+    raise AssertionError
+    raise NotImplementedError
+
+    # Don't complain if non-runnable code isn't run:
+    if 0:
+    if __name__ == .__main__.:
+
+ignore_errors = True
+
+[html]
+
+
+directory = coverage_html_report

@@ -30,6 +30,7 @@ Note: This fusion framework has been used in multiple projects and hasn't been c
 Full paper: https://www.mdpi.com/2227-9717/11/2/501
 
 MDPI and ACS Style
+
 Senel, N.; Kefferpütz, K.; Doycheva, K.; Elger, G. Multi-Sensor Data Fusion for Real-Time Multi-Object Tracking. Processes 2023, 11, 501.
 
 ## License

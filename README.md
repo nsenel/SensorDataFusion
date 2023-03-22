@@ -8,9 +8,15 @@ Our modular, real-time capable architecture is adaptable and does not rely on th
 
 
 ## Usage
+Software tested under ROS-Melodic,ROS-Noetic and Python 3.6.9(When using ROS-Noetic **vision_opencv** package can be removed from src/fusion it is only needed for using image bridge with python3)
 To use our multi-sensor fusion framework, follow these steps:
 
 Install the required dependencies ROS, Python(Matplotlib, numpy, opencv).
+
+1-export ROS_PYTHON_VERSION=3(If using ROS-Melodic)
+2-catkin_make
+3-source devel/setup.bash
+
 Running with lgsvl simulator:
 Run the fusion framework main ros launch: **roslaunch unscented_kf_v4 lgsvl_bag_tracker.launch**
   - Change the bag file location or disable the command simulation running in parallel

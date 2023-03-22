@@ -15,10 +15,10 @@ Running with lgsvl simulator:
 Run the fusion framework main ros launch: **roslaunch unscented_kf_v4 lgsvl_bag_tracker.launch**
   - Change the bag file location or disable the command simulation running in parallel
 Runing with custom sensor set:
-  - Change subcribe topic names in ukf_ros_node_lgsvl.py as custom topic names.
+  - Change subcribe topic names in **ukf_ros_node_lgsvl.py** as custom topic names.
   - Adjust the detection callback functions to parse custom detection message.
-  - Change sensor_parameters_config.py regarding custom sensor calibration.
-Customize the fusion framework parameters as needed in tracker_parameters_config.py.
+  - Change **sensor_parameters_config.py** regarding custom sensor setup.
+Customize the fusion framework parameters as needed in **tracker_parameters_config.py**.
 
 Note: This fusion framework has been used in multiple projects and hasn't been cleaned up completely yet, therefore you may encounter unused ROS messages and/or project-specific comments in the code.
 
